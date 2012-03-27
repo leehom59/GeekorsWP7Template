@@ -1,7 +1,7 @@
 Geekors WP7 Template v.1.0.0
 ==========================
 
-All template project base on <a href="http://www.novanet.no/blog/yngve-bakken-nilsen/dates/2012/3/wp7-boilerplate/" target="_blank">this post</a>
+Entire template project base on <a href="http://www.novanet.no/blog/yngve-bakken-nilsen/dates/2012/3/wp7-boilerplate/" target="_blank">this post</a>
 
 ##Feature
 
