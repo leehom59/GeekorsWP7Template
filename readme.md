@@ -15,9 +15,9 @@ Geekors WP7 Template v.1.0.0
 	
 3.Press F5 to run this project.
 
-4.You will see this sample on your device or emulator named "Geekors WP7".
+4.You will see this sample application on your device or emulator named "Geekors WP7".
 
-##Usage 2
+##Development
 
 1.Your view(xaml file) must has one viewmodel that inherit from BaseViewModel.
 
@@ -28,4 +28,17 @@ Geekors WP7 Template v.1.0.0
 	{
 		//your model fields.
 	}
+	
+3.Navigation function : if you want to navigate to DetailPage.xaml from MainPage.xaml, put the following code on MainPage.xaml.cs.
+	
+	App.ViewModel.GoTo<DetailPageViewModel>();
+
+4.Navigating to DetailPage.xaml with parameters.
+
+	var p = new ResourceDictionary() { { "ID", 007 } };
+    App.ViewModel.GoToWithParameters<DetailPageViewModel>(p);
+
+4.1 Then you can get the parameters at DtailPage by using NavigationContext object.
+
+	string id = NavigationContext.QueryString["ID"];
 	
