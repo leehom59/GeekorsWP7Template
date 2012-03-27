@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="Core\Attributes\PageDefinitionAttribute.cs" />
     <Compile Include="Core\Converters\DataTimeConverter.cs" />
+    <Compile Include="Core\Extensions\CollectionExtensions.cs" />
     <Compile Include="Core\Extensions\ViewModelExtensions.cs" />
     <Compile Include="Core\Helpers\PageHelpers.cs" />
     <Compile Include="DetailPage.xaml.cs">

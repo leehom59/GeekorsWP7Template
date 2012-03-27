@@ -13,11 +13,17 @@ using Microsoft.Phone.Controls;
 
 namespace Geekors.GWP7
 {
+    using ViewModels.Pages;
+
     public partial class DetailPage : PhoneApplicationPage
     {
         public DetailPage()
         {
             InitializeComponent();
+
+            string id = NavigationContext.QueryString["ID"];
+            var _viewModel = (DetailPageViewModel)App.ViewModel.CurrentViewModel;
+
         }
     }
 }

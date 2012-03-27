@@ -7,15 +7,15 @@ using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 
 namespace Geekors.GWP7.ViewModels
 {
-    using Pages;
     using Core.Extensions;
-    using System.Windows.Navigation;
-    using Geekors.GWP7.Core.Helpers;
+    using Core.Helpers;
+    using Pages;
 
     /// <summary>
     /// Similar to Global file of asp.net web project
@@ -71,7 +71,9 @@ namespace Geekors.GWP7.ViewModels
         {
             Type type = typeof(T);
             var pageDefinition = type.PageDefinition();
-            Navigation.Navigate(pageDefinition.RelativeUri);
+            Uri _uri = new Uri(pageDefinition.ToString() + parameters.ToQueryString() , UriKind.Relative);
+            
+            Navigation.Navigate(_uri);
         }
 
         /// <summary>

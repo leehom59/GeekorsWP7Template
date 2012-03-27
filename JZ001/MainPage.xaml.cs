@@ -28,7 +28,8 @@ namespace Geekors.GWP7
 
         protected void button1_Click(object sender, RoutedEventArgs e)
         {
-            App.ViewModel.GoTo<DetailPageViewModel>();
+            var p = new ResourceDictionary() { { "ID", 007 } };
+            App.ViewModel.GoToWithParameters<DetailPageViewModel>(p);
         }
     }
 }
