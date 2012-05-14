@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Geekorswp7template by leehom59</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Geekorswp7template</h1>
+        <p>GeekorsWP7Template</p>
+        <p class="view"><a href="https://github.com/leehom59/GeekorsWP7Template">View the Project on GitHub <small>leehom59/GeekorsWP7Template</small></a></p>
+        <ul>
+          <li><a href="https://github.com/leehom59/GeekorsWP7Template/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/leehom59/GeekorsWP7Template/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/leehom59/GeekorsWP7Template">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Geekors WP7 Template v.1.0.0</h1>
+
+<p>Entire template project base on <a href="http://www.novanet.no/blog/yngve-bakken-nilsen/dates/2012/3/wp7-boilerplate/" target="_blank">this post</a></p>
+
+<h2>Feature</h2>
+
+<p>1.Providing the groundwork of windows phone 7 project quickly.</p>
+
+<h2>Usage</h2>
+
+<p>1.Clone git project.</p>
+
+<pre><code>git clone git@github.com:leehom59/GeekorsWP7Template.git
+</code></pre>
+
+<p>2.Open the JZ001.sln file on the root of project folder.</p>
+
+<p>3.Press F5 to run this project.</p>
+
+<p>4.You will see this sample application on your device or emulator named "Geekors WP7".</p>
+
+<h2>Development</h2>
+
+<p>1.Your view(xaml file) must has one viewmodel that inherit from BaseViewModel.</p>
+
+<p>2.This viewmodel must declare PageDefinition Attribute with the view(xaml file) path.</p>
+
+<pre><code>[PageDefinition("/DetailPage.xaml")]
+public class DetailPageViewModel : BaseViewModel
+{
+    //your model fields.
+}
+</code></pre>
+
+<p>3.Navigation function : if you want to navigate to DetailPage.xaml from MainPage.xaml, put the following code on MainPage.xaml.cs.</p>
+
+<pre><code>App.ViewModel.GoTo&lt;DetailPageViewModel&gt;();
+</code></pre>
+
+<p>4.Navigating to DetailPage.xaml with parameters.</p>
+
+<pre><code>var p = new ResourceDictionary() { { "ID", 007 } };
+App.ViewModel.GoToWithParameters&lt;DetailPageViewModel&gt;(p);
+</code></pre>
+
+<p>4.1 Then you can get the parameters at DtailPage by using NavigationContext object.</p>
+
+<pre><code>string id = NavigationContext.QueryString["ID"];
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/leehom59">leehom59</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
