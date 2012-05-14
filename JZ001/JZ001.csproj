@@ -64,11 +64,15 @@
     <Compile Include="Core\Attributes\PageDefinitionAttribute.cs" />
     <Compile Include="Core\Converters\DataTimeConverter.cs" />
     <Compile Include="Core\Extensions\CollectionExtensions.cs" />
+    <Compile Include="Core\Extensions\DateTimeExtension.cs" />
     <Compile Include="Core\Extensions\ViewModelExtensions.cs" />
     <Compile Include="Core\Helpers\PageHelpers.cs" />
+    <Compile Include="Core\Security\MD5.cs" />
+    <Compile Include="Core\Security\MD5Managed.cs" />
     <Compile Include="DetailPage.xaml.cs">
       <DependentUpon>DetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Core\Extensions\StringExtension.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -107,7 +111,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
